@@ -18,8 +18,57 @@ Deadlock is a condition in operating systems...
 - Banker's Algorithm
 - RAG Cycle Detection
 
-## 5. Flowchart
-(Your Flowchart.png will be displayed)
+## 5. Flowchart (Text Format)
+
+          ┌──────────────────────────┐
+          │        START PROGRAM      │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ INPUT MATRICES: Max,      │
+          │ Allocation, Available     │
+          └───────────┬──────────────┘
+                      │
+          ┌───────────▼──────────────┐
+          │ CALCULATE NEED (Max-Alloc)│
+          └───────────┬──────────────┘
+                      │
+      ┌───────────────▼─────────────────┐
+      │ RUN BANKER SAFETY ALGORITHM     │
+      └───────────────┬─────────────────┘
+                      │ Safe
+                      ▼
+               PRINT SAFE SEQUENCE
+                      │
+        ┌─────────────▼────────────┐
+        │ USER REQUESTS RESOURCES? │
+        └─────────────┬────────────┘
+           Yes         │         No
+                      ▼
+       TRY TEMPORARY ALLOCATION
+                      │
+      RUN SAFETY CHECK AGAIN
+                      │
+           ┌──────────┴──────────┐
+           │ Safe      |   Unsafe │
+           ▼           |     ▼    │
+   GRANT REQUEST       |  DENY    │
+                       │
+                ┌──────▼───────────┐
+                │ RAG DEADLOCK CHECK│
+                └──────┬───────────┘
+                 No     │       Yes
+                        ▼
+               DEADLOCK DETECTED
+                        │
+                 EXECUTE RECOVERY
+                        │
+                 TERMINATE PROCESS
+                        │
+              FREE RESOURCES + CONTINUE
+                        │
+                      END
+
 
 ## 6. GitHub Workflow
 git init  
