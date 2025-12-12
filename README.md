@@ -36,7 +36,6 @@ deadlock-prevention-toolkit/
 ├── docs/
 │   ├── Report.md           # Full project report
 │   ├── Flowchart.png       # Flowchart for the algorithm
-│   └── Viva_Questions.md   # Viva preparation questions
 │
 └── README.md
 ```
@@ -133,8 +132,6 @@ It includes diagrams, explanation, advantages, limitations, and module details.
 
 **Vani Bhardwaj**  
 Roll No: RK24PRA11  
-**Riya**
-Roll No: RK24PRA10
 B.Tech CSE – Operating Systems Project  
 ---
 
